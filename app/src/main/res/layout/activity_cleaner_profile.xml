@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cleaner_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color"
+    tools:context=".CleanerProfileActivity">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="start"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Back"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_back" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_cleaner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: John Doe"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent_color"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txt_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age: 30"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address: 123 Main St."
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txt_mobile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile: 123-456-7890"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txt_schedule_availability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule: Monday - Friday"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txt_capability_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capability Index:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent_color"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txt_attitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attitude: 4.5"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txt_cleaning_quality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cleaning Quality: 4.8"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txt_customer_satisfaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Satisfaction: 4.7"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

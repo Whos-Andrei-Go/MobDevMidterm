@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/booking"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="start"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Back"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_back" />
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center|start"
+        android:text="Book a Cleaning Service"
+        android:textColor="@color/accent_color"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Address"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/edit_service_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter service address"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Items"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinner_service_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Duration/Date"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/edit_service_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select duration or date"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:focusable="false"
+        android:clickable="true"
+        android:padding="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coupon (if available)"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/edit_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter coupon code"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/btn_submit_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Booking"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/primary_color"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+</LinearLayout>
