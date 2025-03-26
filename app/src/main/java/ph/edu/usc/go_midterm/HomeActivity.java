@@ -1,5 +1,6 @@
 package ph.edu.usc.go_midterm;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,10 +48,7 @@ public class HomeActivity extends AppCompatActivity {
 
         RecyclerView listCleaners = findViewById(R.id.list_cleaners);
 
-        List<Category> categories = new ArrayList<>();
-        categories.add(new Category("Cleaning Service", "Cleaning", Arrays.asList("Home Cleaning", "Office Cleaning", "Deep Cleaning")));
-        categories.add(new Category("Cleaning Appliance", "Appliance", Arrays.asList("Air Conditioner Cleaning", "Washing Machine Cleaning")));
-        categories.add(new Category("Babysitter", "Babysitting", Arrays.asList("Infant Care", "Toddler Care", "Preschooler Care")));
+        List<Category> categories = getTopThreeCategories(this);
 
         CategorySmallAdapter categoryAdapter = new CategorySmallAdapter(this, categories);
         listCategories.setAdapter(categoryAdapter);
@@ -92,5 +94,33 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private List<Category> getTopThreeCategories(Context context) {
+        List<Category> categories = new ArrayList<>();
+
+        try {
+            String jsonString = Utils.loadJSONFromAsset(context, "categories.json");
+            JSONObject jsonObject = new JSONObject(jsonString);
+            JSONArray categoryArray = jsonObject.getJSONArray("categories");
+
+            for (int i = 0; i < Math.min(3, categoryArray.length()); i++) {
+                JSONObject categoryJson = categoryArray.getJSONObject(i);
+                String name = categoryJson.getString("name");
+                String type = categoryJson.getString("type");
+
+                JSONArray servicesJsonArray = categoryJson.getJSONArray("services");
+                List<String> services = new ArrayList<>();
+                for (int j = 0; j < servicesJsonArray.length(); j++) {
+                    services.add(servicesJsonArray.getString(j));
+                }
+
+                categories.add(new Category(name, type, services));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return categories;
     }
 }
