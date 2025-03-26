@@ -13,13 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
+public class CategorySmallAdapter extends RecyclerView.Adapter<CategorySmallAdapter.CategorySmallViewHolder> {
 
     private List<Category> categoryList;
     private List<Category> filteredCategoryList;
     private Context context;
 
-    public CategoryAdapter(Context context, List<Category> categoryList) {
+    public CategorySmallAdapter(Context context, List<Category> categoryList) {
         this.categoryList = categoryList;
         this.filteredCategoryList = new ArrayList<>(categoryList);
         this.context = context;
@@ -27,13 +27,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     @NonNull
     @Override
-    public CategoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_category, parent, false);
-        return new CategoryViewHolder(view);
+    public CategorySmallViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_category_small, parent, false);
+        return new CategorySmallViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(CategoryViewHolder holder, int position) {
+    public void onBindViewHolder(CategorySmallViewHolder holder, int position) {
         Category category = filteredCategoryList.get(position);
         holder.categoryName.setText(category.getName());
 
@@ -69,10 +69,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         notifyDataSetChanged();
     }
 
-    public static class CategoryViewHolder extends RecyclerView.ViewHolder {
+    public static class CategorySmallViewHolder extends RecyclerView.ViewHolder {
         TextView categoryName;
 
-        public CategoryViewHolder(View itemView) {
+        public CategorySmallViewHolder(View itemView) {
             super(itemView);
             categoryName = itemView.findViewById(R.id.txt_category_name);
         }

@@ -22,6 +22,16 @@
         android:background="@android:color/transparent"
         android:src="@drawable/icon_back" />
 
+    <TextView
+        android:id="@+id/txt_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Cleaners"
+        android:textColor="@color/accent_color"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -38,20 +48,24 @@
 
             <ImageView
                 android:id="@+id/img_cleaner"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
                 android:scaleType="centerCrop"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/pfp_default"
+                android:layout_marginTop="8dp" />
 
             <TextView
                 android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name: John Doe"
-                android:textSize="20sp"
+                android:text="John Doe"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@color/accent_color"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center" />
 
             <TextView
                 android:id="@+id/txt_age"
@@ -60,7 +74,8 @@
                 android:text="Age: 30"
                 android:textSize="18sp"
                 android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center" />
 
             <TextView
                 android:id="@+id/txt_address"
@@ -69,7 +84,8 @@
                 android:text="Address: 123 Main St."
                 android:textSize="18sp"
                 android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center" />
 
             <TextView
                 android:id="@+id/txt_mobile_number"
@@ -78,7 +94,8 @@
                 android:text="Mobile: 123-456-7890"
                 android:textSize="18sp"
                 android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center" />
 
             <TextView
                 android:id="@+id/txt_schedule_availability"
@@ -87,44 +104,88 @@
                 android:text="Schedule: Monday - Friday"
                 android:textSize="18sp"
                 android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center" />
 
             <TextView
                 android:id="@+id/txt_capability_index"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Capability Index:"
+                android:text="Capability Index"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/accent_color"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center" />
 
-            <TextView
-                android:id="@+id/txt_attitude"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Attitude: 4.5"
-                android:textSize="18sp"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp" />
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
 
-            <TextView
-                android:id="@+id/txt_cleaning_quality"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cleaning Quality: 4.8"
-                android:textSize="18sp"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp" />
+                <TextView
+                    android:id="@+id/txt_attitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Attitude"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp" />
 
-            <TextView
-                android:id="@+id/txt_customer_satisfaction"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Customer Satisfaction: 4.7"
-                android:textSize="18sp"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp" />
+                <ProgressBar
+                    android:id="@+id/progress_attitude"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressTint="@color/primary_color"
+                    android:progressBackgroundTint="@color/gray"
+                    android:clipToPadding="false"/>
+
+                <TextView
+                    android:id="@+id/txt_cleaning_quality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cleaning Quality"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_cleaning_quality"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressTint="#3058BE"
+                    android:progressBackgroundTint="@color/gray"
+                    android:clipToPadding="false"/>
+
+                <TextView
+                    android:id="@+id/txt_customer_satisfaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Satisfaction"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_customer_satisfaction"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressTint="#3086BE"
+                    android:progressBackgroundTint="@color/gray"
+                    android:clipToPadding="false"/>
+
+
+            </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

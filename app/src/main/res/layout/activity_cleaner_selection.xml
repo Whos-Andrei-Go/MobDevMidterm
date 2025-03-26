@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/available_cleaners"
+    android:id="@+id/cleaner_selection"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -24,10 +24,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Available Cleaners"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textColor="@color/accent_color"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_cleaner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search for cleaners..."
+        android:layout_marginBottom="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_cleaners"

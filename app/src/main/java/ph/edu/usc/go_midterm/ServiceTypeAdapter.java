@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -30,10 +29,10 @@ public class ServiceTypeAdapter extends RecyclerView.Adapter<ServiceTypeAdapter.
     public void onBindViewHolder(ServiceTypeViewHolder holder, int position) {
         ServiceType serviceType = serviceTypes.get(position);
 
-        holder.serviceTypeTextView.setText("Service: " + serviceType.getServiceName());
+        holder.serviceTypeTextView.setText(serviceType.getServiceName());
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(v.getContext(), AvailableCleanersActivity.class);
+            Intent intent = new Intent(v.getContext(), CleanerSelectionActivity.class);
             intent.putExtra("serviceType", serviceType.getServiceName());
             v.getContext().startActivity(intent);
         });

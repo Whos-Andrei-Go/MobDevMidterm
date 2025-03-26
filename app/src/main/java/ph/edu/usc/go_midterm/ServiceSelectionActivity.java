@@ -1,5 +1,6 @@
 package ph.edu.usc.go_midterm;
 
+import android.app.Service;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -42,11 +43,14 @@ public class ServiceSelectionActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.list_service_types);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        ArrayList<String> serviceNames = getIntent().getStringArrayListExtra("services");
+
         List<ServiceType> serviceList = new ArrayList<>();
-        serviceList.add(new ServiceType("Cleaning"));
-        serviceList.add(new ServiceType("Aircon Service"));
-        serviceList.add(new ServiceType("Car Wash"));
-        serviceList.add(new ServiceType("Babysitting"));
+        if (serviceNames != null) {
+            for (String serviceName : serviceNames) {
+                serviceList.add(new ServiceType(serviceName));
+            }
+        }
 
         serviceTypeAdapter = new ServiceTypeAdapter(serviceList);
         recyclerView.setAdapter(serviceTypeAdapter);

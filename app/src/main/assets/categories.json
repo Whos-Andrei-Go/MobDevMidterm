@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "name": "Cleaning Service",
+      "type": "Cleaning",
+      "services": ["Home Cleaning", "Office Cleaning", "Deep Cleaning"]
+    },
+    {
+      "name": "Cleaning Appliance",
+      "type": "Appliance",
+      "services": ["Air Conditioner Cleaning", "Washing Machine Cleaning"]
+    },
+    {
+      "name": "Babysitter",
+      "type": "Babysitting",
+      "services": ["Infant Care", "Toddler Care", "Preschooler Care"]
+    },
+    {
+      "name": "Pet Care",
+      "type": "Animal Services",
+      "services": ["Dog Walking", "Pet Grooming", "Pet Sitting"]
+    },
+    {
+      "name": "Laundry Service",
+      "type": "Laundry",
+      "services": ["Wash & Fold", "Dry Cleaning", "Ironing"]
+    },
+    {
+      "name": "Home Repair",
+      "type": "Repair",
+      "services": ["Furniture Repair", "General Handyman", "Home Maintenance"]
+    },
+    {
+      "name": "Electrician",
+      "type": "Electrical",
+      "services": ["Wiring", "Lighting Installation", "Circuit Repair"]
+    },
+    {
+      "name": "Plumber",
+      "type": "Plumbing",
+      "services": ["Leak Repair", "Drain Cleaning", "Pipe Installation"]
+    },
+    {
+      "name": "Gardening Service",
+      "type": "Gardening",
+      "services": ["Lawn Mowing", "Tree Trimming", "Garden Maintenance"]
+    },
+    {
+      "name": "Personal Chef",
+      "type": "Food Services",
+      "services": ["Meal Prep", "Catering", "Private Dining"]
+    }
+  ]
+}

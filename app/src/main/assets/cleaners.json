@@ -1,0 +1,154 @@
+{
+  "cleaners": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": 30,
+      "address": "123 Main St",
+      "phone": "123-456-7890",
+      "rating": 4.5,
+      "availability": "Monday - Friday",
+      "serviceTypes": ["Home Cleaning", "Office Cleaning", "Deep Cleaning"],
+      "capabilityIndex": {
+        "attitude": 90,
+        "quality": 96,
+        "satisfaction": 94
+      }
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 28,
+      "address": "456 Oak St",
+      "phone": "123-456-7891",
+      "rating": 4.8,
+      "availability": "Weekends",
+      "serviceTypes": ["Air Conditioner Cleaning", "Washing Machine Cleaning"],
+      "capabilityIndex": {
+        "attitude": 86,
+        "quality": 92,
+        "satisfaction": 96
+      }
+    },
+    {
+      "id": 3,
+      "name": "David Lee",
+      "age": 35,
+      "address": "789 Pine St",
+      "phone": "123-456-7892",
+      "rating": 4.7,
+      "availability": "Monday - Saturday",
+      "serviceTypes": ["Infant Care", "Toddler Care", "Preschooler Care"],
+      "capabilityIndex": {
+        "attitude": 92,
+        "quality": 98,
+        "satisfaction": 90
+      }
+    },
+    {
+      "id": 4,
+      "name": "Mike Johnson",
+      "age": 32,
+      "address": "123 Elm St",
+      "phone": "123-456-7893",
+      "rating": 4.6,
+      "availability": "Weekdays",
+      "serviceTypes": ["Dog Walking", "Pet Grooming", "Pet Sitting"],
+      "capabilityIndex": {
+        "attitude": 75,
+        "quality": 80,
+        "satisfaction": 78
+      }
+    },
+    {
+      "id": 5,
+      "name": "Emily White",
+      "age": 27,
+      "address": "321 Oak St",
+      "phone": "123-456-7894",
+      "rating": 4.9,
+      "availability": "Flexible Hours",
+      "serviceTypes": ["Wash & Fold", "Dry Cleaning", "Ironing"],
+      "capabilityIndex": {
+        "attitude": 60,
+        "quality": 65,
+        "satisfaction": 62
+      }
+    },
+    {
+      "id": 6,
+      "name": "Sarah Brown",
+      "age": 40,
+      "address": "654 Maple St",
+      "phone": "123-456-7895",
+      "rating": 4.3,
+      "availability": "Monday - Friday",
+      "serviceTypes": ["Furniture Repair", "General Handyman", "Home Maintenance"],
+      "capabilityIndex": {
+        "attitude": 88,
+        "quality": 92,
+        "satisfaction": 91
+      }
+    },
+    {
+      "id": 7,
+      "name": "James Wilson",
+      "age": 38,
+      "address": "987 Birch St",
+      "phone": "123-456-7896",
+      "rating": 4.6,
+      "availability": "Weekends",
+      "serviceTypes": ["Wiring", "Lighting Installation", "Circuit Repair"],
+      "capabilityIndex": {
+        "attitude": 90,
+        "quality": 96,
+        "satisfaction": 94
+      }
+    },
+    {
+      "id": 8,
+      "name": "Linda Carter",
+      "age": 45,
+      "address": "246 Cedar St",
+      "phone": "123-456-7897",
+      "rating": 5.0,
+      "availability": "Flexible Hours",
+      "serviceTypes": ["Leak Repair", "Drain Cleaning", "Pipe Installation"],
+      "capabilityIndex": {
+        "attitude": 86,
+        "quality": 92,
+        "satisfaction": 96
+      }
+    },
+    {
+      "id": 9,
+      "name": "Alice Green",
+      "age": 25,
+      "address": "555 Maple St",
+      "phone": "123-456-7898",
+      "rating": 4.2,
+      "availability": "Monday - Friday",
+      "serviceTypes": ["Lawn Mowing", "Tree Trimming", "Garden Maintenance"],
+      "capabilityIndex": {
+        "attitude": 75,
+        "quality": 80,
+        "satisfaction": 78
+      }
+    },
+    {
+      "id": 10,
+      "name": "Bob Blue",
+      "age": 38,
+      "address": "888 Oak St",
+      "phone": "123-456-7899",
+      "rating": 4.7,
+      "availability": "Weekends",
+      "serviceTypes": ["Meal Prep", "Catering", "Private Dining"],
+      "capabilityIndex": {
+        "attitude": 88,
+        "quality": 92,
+        "satisfaction": 91
+      }
+    }
+  ]
+}
